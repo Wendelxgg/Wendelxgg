@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = " 🔥 BLOX FRUITS [by Wendelx]",
-   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   Icon = 132385483383920, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "BLOX FRUITS",
    LoadingSubtitle = "by Wendellx",
    Theme = "Serenity", -- Check https://docs.sirius.menu/rayfield/configuration/themes
@@ -22,7 +22,7 @@ local Window = Rayfield:CreateWindow({
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
 
-   KeySystem = true, -- Set this to true to use our key system
+   KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
       Title = "Untitled",
       Subtitle = "Key System",
@@ -351,5 +351,97 @@ local Button = Tab:CreateButton({
  if v:IsA("Part") then v.Material = Enum.Material.SmoothPlastic
  end
  end
+   end,
+})
+
+local Tab = Window:CreateTab("💰 | Shop", nil) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Buy Dark Step",
+   Callback = function()
+   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
+ 
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Buy Eletric",
+   Callback = function()
+   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
+ 
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Buy Water Kung fu",
+   Callback = function()
+   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyFishmanKarate")
+ 
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Buy Dragon Claw",
+   Callback = function()
+   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","1")
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","DragonClaw","2")
+ 
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Buy Super human",
+   Callback = function()
+   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman")
+ 
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Buy Black leg",
+   Callback = function()
+   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyBlackLeg")
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Buy Sharkman Karatê",
+   Callback = function()
+   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate",true)
+ game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate")
+ 
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Buy Eletric Claw",
+   Callback = function()
+   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw")
+ 
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Buy Dragon Talon",
+   Callback = function()
+   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon")
+ 
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Buy God Human",
+   Callback = function()
+   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
+ 
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Buy Sanguíne Art",
+   Callback = function()
+   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")
+ 
    end,
 })
