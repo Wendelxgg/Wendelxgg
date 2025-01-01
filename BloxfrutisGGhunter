@@ -1,11 +1,11 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = " 🔥 BLOX FRUITS [by Wendelx]",
-   Icon = 132385483383920, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   Name = "BLOX FRUITS [by Wendelx]",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "BLOX FRUITS",
    LoadingSubtitle = "by Wendellx",
-   Theme = "Serenity", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   Theme = "Darker", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -442,6 +442,16 @@ local Button = Tab:CreateButton({
    Name = "Buy Sanguíne Art",
    Callback = function()
    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")
+ 
+   end,
+})
+
+local Tab = Window:CreateTab(" 🍎 | Fruits", nil) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Random Fruit",
+   Callback = function()
+   game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
  
    end,
 })
